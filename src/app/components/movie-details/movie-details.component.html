@@ -1,1 +1,46 @@
-<p>movie-details works!</p>
+<link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
+
+<div class="grid">
+    <div class="col-3 mt-3">
+
+        <img src="{{ movie.image.medium }}" width="100%" class="shadow-8" height="100%"
+            style=" border:  1px solid black; padding:0.5cm;" />
+
+    </div>
+    <div class="col-9 mt-3"><p-card>
+            <div>
+                <a style="font-weight: bold; font-size: 1.2em;">Show's Name</a>
+                <hr class="shadow-2" style="border: 0.5px solid ;">
+                <a class="mb-1" style="font-size: 1.1em;"> {{movie.name}}</a>
+            </div>
+            <p></p>
+            <div>
+                <a style="font-weight: bold; font-size: 1.2em;">Show's Genres</a>
+                <hr class="shadow-2" style="border: 0.5px solid ;">
+                <a class="mb-1" style="font-size: 1.1em;"> {{movie.genres}}</a>
+            </div>
+            <p></p>
+            <div>
+                <a style="font-weight: bold; font-size: 1.2em;">Show's Language</a>
+                <hr class="shadow-2" style="border: 0.5px solid ;">
+                <a class="mb-1" style="font-size: 1.1em;"> {{movie.genres}}</a>
+            </div>
+            <p></p>
+            <div>
+                <a class="mt-2" style="font-weight: bold; font-size: 1.2em;">Show's Summary</a>
+                <hr class="shadow-2" style="border: 0.5px solid ;">
+                <a class="mb-1" style="font-size: 1.1em;"> {{movie.summary}}</a>
+            </div>
+            <p></p>
+            <div>
+                <a class="mt-2" style="font-weight: bold; font-size: 1.2em;" href="{{movie.officialSite}}">Show's
+                    Link:</a>
+
+            </div>
+
+
+
+
+        </p-card></div>
+
+</div>

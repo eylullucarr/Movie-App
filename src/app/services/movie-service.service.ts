@@ -13,4 +13,10 @@ export class MovieServiceService {
   getMovies(searchQuery: string): Observable<any> {
     return this.http.get(this.API_URL + `${searchQuery}`);
   }
+
+  getMoviesId(id: number): Observable<any> {
+    return this.http.get(
+      `https://api.tvmaze.com/lookup/shows?tvrage=` + `${id}`
+    );
+  }
 }

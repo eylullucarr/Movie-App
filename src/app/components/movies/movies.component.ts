@@ -31,13 +31,11 @@ export class MoviesComponent {
   Query: any;
   movies: any = [];
 
-  search(searchQuery: string) {
-    console.log(searchQuery);
-    this.movieservice.getMovies(searchQuery).subscribe((response) => {
+  search() {
+    console.log(this.Query);
+    this.movieservice.getMovies(this.Query).subscribe((response) => {
       console.log(response);
       this.movies = response;
-      console.log(response.show.name);
-      this.cdr.detectChanges();
     });
   }
 }
