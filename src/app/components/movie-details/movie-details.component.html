@@ -6,8 +6,11 @@
         <img src="{{ movie.image.medium }}" width="100%" class="shadow-8" height="100%"
             style=" border:  1px solid black; padding:0.5cm;" />
 
+
     </div>
     <div class="col-9 mt-3"><p-card>
+            <a class="text-blue-900" style="font-weight: bold; font-size: 1.3em;">{{movie.status}}</a>
+            <p></p>
             <div>
                 <a style="font-weight: bold; font-size: 1.2em;">Show's Name</a>
                 <hr class="shadow-2" style="border: 0.5px solid ;">
@@ -23,7 +26,7 @@
             <div>
                 <a style="font-weight: bold; font-size: 1.2em;">Show's Language</a>
                 <hr class="shadow-2" style="border: 0.5px solid ;">
-                <a class="mb-1" style="font-size: 1.1em;"> {{movie.genres}}</a>
+                <a class="mb-1" style="font-size: 1.1em;"> {{movie.language}}</a>
             </div>
             <p></p>
             <div>
@@ -33,14 +36,12 @@
             </div>
             <p></p>
             <div>
-                <a class="mt-2" style="font-weight: bold; font-size: 1.2em;" href="{{movie.officialSite}}">Show's
+                <a class="mt-2 text-pink-900" style="font-weight: bold; font-size: 1.2em;"
+                    href="{{movie.officialSite}}">Show's
                     Link:</a>
 
             </div>
-
-
-
-
-        </p-card></div>
+        </p-card>
+    </div>
 
 </div>

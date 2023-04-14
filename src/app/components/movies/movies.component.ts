@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
@@ -37,5 +37,10 @@ export class MoviesComponent {
       console.log(response);
       this.movies = response;
     });
+  }
+
+  @HostListener('keydown.enter')
+  onEnter() {
+    this.search();
   }
 }
