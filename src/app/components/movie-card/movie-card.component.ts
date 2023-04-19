@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { RouterModule } from '@angular/router';
-import { MovieDetailsComponent } from '../movie-details/movie-details.component';
+import { MovieDetailComponent } from '../movie-detail/movie-detail.component';
 
 @Component({
   selector: 'app-movie-card',
@@ -18,11 +18,22 @@ import { MovieDetailsComponent } from '../movie-details/movie-details.component'
     CardModule,
     ButtonModule,
     RouterModule,
-    MovieDetailsComponent,
+    MovieDetailComponent,
   ],
 })
-export class MovieCardComponent {
+export class MovieCardComponent implements OnInit {
   @Input('movie') movie: any;
 
   constructor(private router: Router) {}
+
+  removePTags(text: string) {
+    return text.replace(/<\/?p>/gi, '').replace(/<\/?(b|i)>/gi, '');
+  }
+
+  newSummary = '';
+
+  ngOnInit(): void {
+    console.log(this.movie);
+    this.newSummary = this.removePTags(this.movie.show.summary);
+  }
 }
