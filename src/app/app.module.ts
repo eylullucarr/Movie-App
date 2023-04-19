@@ -10,25 +10,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MenubarModule } from 'primeng/menubar';
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesComponent } from './components/movies/movies.component';
-import { PeopleComponent } from './components/people/people.component';
-import { DockComponent } from './components/dock/dock.component';
-
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    HttpClientModule,
-    BrowserAnimationsModule,
-    BrowserModule,
-    AppRoutingModule,
-    NoopAnimationsModule,
-    InputTextModule,
-    FormsModule,
-    HttpClientModule,
-    CardModule,
-    MenubarModule,
-    MoviesComponent,
-    DockComponent,
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, MoviesComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,23 +1,18 @@
 <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
 
-
-
-
 <div class="grid flex justify-content-center">
     <p class="text-center text-4xl "> Search For The Movie You Want </p>
 </div>
 <div class="flex justify-content-center ">
-    <p-card [style]="{ width: '880px' }">
-        <div class=" flex justify-content-center m-2">
-            <input [style]="{ width: '780px' }" type="text" [(ngModel)]="Query" class="mr-3 " pInputText />
-            <p-button (click)="search()" label="Submit"></p-button>
+    <p-card class=" border-round-3xl ">
+        <div class=" flex justify-content-center">
+            <input type="text" [style]="{ width: '500px' }" [(ngModel)]="Query" class="mr-3 " pInputText />
+            <p-button (click)="search()" label="Submit" (keydown.enter)="onEnter()"></p-button>
         </div>
     </p-card>
 </div>
-<p></p>
-<div class="movie" class="grid">
+<div class="movie">
 
-    <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
-
+    <app-movie-card *ngFor=" let movie of movies" class="mr-5 ml-5" [movie]="movie"></app-movie-card>
 
 </div>

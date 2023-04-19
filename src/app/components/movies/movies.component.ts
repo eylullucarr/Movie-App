@@ -1,14 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
 import { MovieServiceService } from 'src/app/services/movie-service.service';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
-
-import { MovieDetailsComponent } from '../movie-details/movie-details.component';
+import { response } from 'express';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movies',
@@ -22,8 +21,6 @@ import { MovieDetailsComponent } from '../movie-details/movie-details.component'
     InputTextModule,
     MovieCardComponent,
     FormsModule,
-    MovieDetailsComponent,
-    RouterModule,
   ],
 })
 export class MoviesComponent {
@@ -41,5 +38,12 @@ export class MoviesComponent {
       console.log(response);
       this.movies = response;
     });
+    this.movieservice.setQuery(this.Query);
+    console.log(this.movieservice.getQuery());
+  }
+
+  @HostListener('keydown.enter')
+  onEnter() {
+    this.search();
   }
 }

@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
-import { DockComponent } from './components/dock/dock.component';
 import { MoviesComponent } from './components/movies/movies.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 
 const routes: Routes = [
   {
@@ -18,7 +17,7 @@ const routes: Routes = [
   {
     path: 'movies/:id',
     pathMatch: 'full',
-    component: MovieDetailsComponent,
+    component: MovieDetailComponent,
   },
 ];
 

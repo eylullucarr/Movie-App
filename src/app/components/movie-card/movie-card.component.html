@@ -2,25 +2,22 @@
 
 
 
-<div class="m-5">
-    <div class="movie m-0">
-        <p-card header="{{movie.show.name}}" subheader="{{movie.show.genres}}" [style]="{ width: '380px' }"
-            class="eylul m-3">
+<div class="mt-5">
+    <div class="movie">
+        <p-card header="{{movie.show.name}}" subheader="{{movie.show.genres}}" [style]="{ width: '380px' }">
             <ng-template pTemplate="header">
                 <img alt="Card" [src]="movie.show.image.medium" />
             </ng-template>
             <div [style]="{ width: '360px', height: '200px', overflow: 'auto' }">
-                <p style="margin-right: 0 20px">
-                    {{ movie.show.summary }}
+                <p class="mr-2">
+                    {{newSummary}}
                 </p>
             </div>
 
 
             <ng-template pTemplate="footer">
-
-                <p-button label="Info" routerLink="/movies/{{movie.show.id}}" [style]="{ 'margin-left': '.5em' }"
-                    styleClass="p-button-outlined p-button-info"></p-button>
-
+                <p-button label="Info" routerLink="/movies/{{movie.show.externals.tvrage}}"
+                    [style]="{ 'margin-left': '.5em' }" styleClass="p-button-outlined p-button-info"></p-button>
             </ng-template>
 
 
