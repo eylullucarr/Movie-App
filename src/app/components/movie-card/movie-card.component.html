@@ -1,36 +1,22 @@
 <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
+<div class="mt-5 mb-5 deneme">
+    <div class="movie">
+        <p-card styleClass="test" header="{{movie.show.name}}" subheader="{{movie.show.genres}}"
+            [style]="{ width: '380px', }">
 
-
-
-<div class="m-5">
-    <div class="movie m-0">
-        <p-card header="{{movie.show.name}}" subheader="{{movie.show.genres}}" [style]="{ width: '380px' }"
-            class="eylul m-3">
             <ng-template pTemplate="header">
                 <img alt="Card" [src]="movie.show.image.medium" />
             </ng-template>
             <div [style]="{ width: '360px', height: '200px', overflow: 'auto' }">
-                <p style="margin-right: 0 20px">
-                    {{ movie.show.summary }}
+
+                <p class="mr-2">
+                    {{newSummary}}
                 </p>
             </div>
-
-
             <ng-template pTemplate="footer">
-
-                <p-button label="Info" routerLink="/movies/{{movie.show.id}}" [style]="{ 'margin-left': '.5em' }"
-                    styleClass="p-button-outlined p-button-info"></p-button>
-
+                <p-button label="Info" routerLink="/movies/{{movie.show.externals.thetvdb}}"
+                    [style]="{ 'margin-left': '.5em' }" styleClass="p-button-outlined p-button-danger"></p-button>
             </ng-template>
-
-
-
-
-
-
-
         </p-card>
-
     </div>
-
 </div>
