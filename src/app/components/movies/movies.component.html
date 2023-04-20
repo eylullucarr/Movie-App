@@ -1,5 +1,21 @@
 <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
+<div>
+    <div class="grid flex justify-content-center">
+        <p class="text-center text-4xl "> Search For The Movie You Want </p>
+    </div>
+    <div class="flex justify-content-center ">
+        <p-card class=" border-round-3xl " styleClass="test">
+            <div class=" flex justify-content-center">
+                <input type="text" styleClass="te" [style]="{ width: '500px' }" [(ngModel)]="Query" class="mr-3 "
+                    pInputText />
+                <p-button (click)="search()" styleClass="p-button-outlined p-button-danger" label="Search"
+                    (keydown.enter)="onEnter()"></p-button>
+            </div>
+        </p-card>
+    </div>
+    <div class="movie">
 
+<<<<<<< HEAD
 
 
 
@@ -20,4 +36,8 @@
     <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
 
 
+=======
+        <app-movie-card *ngFor=" let movie of movies" class="mr-5 ml-5" [movie]="movie">selam</app-movie-card>
+    </div>
+>>>>>>> development
 </div>
