@@ -7,7 +7,7 @@ import { MovieCardComponent } from '../movie-card/movie-card.component';
 import { MovieServiceService } from 'src/app/services/movie-service.service';
 import { FormsModule } from '@angular/forms';
 import { response } from 'express';
-import { Router } from '@angular/router';
+import { Route } from '@angular/router';
 
 @Component({
   selector: 'app-movies',
@@ -26,12 +26,10 @@ import { Router } from '@angular/router';
 export class MoviesComponent {
   constructor(
     private movieservice: MovieServiceService,
-    private router: Router
+    private cdr: ChangeDetectorRef
   ) {}
-
   Query: any;
   movies: any = [];
-
   search() {
     console.log(this.Query);
     this.movieservice.getMovies(this.Query).subscribe((response) => {

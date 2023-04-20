@@ -23,11 +23,7 @@ import { MovieDetailComponent } from '../movie-detail/movie-detail.component';
 })
 export class MovieCardComponent implements OnInit {
   @Input('movie') movie: any;
-  @Output() idEvent = new EventEmitter<number>();
 
-  atsanaoc(id: number) {
-    this.idEvent.emit(id);
-  }
   constructor(private router: Router) {}
 
   removePTags(text: string) {
