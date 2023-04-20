@@ -14,6 +14,7 @@ const routes: Routes = [
     pathMatch: 'full',
     component: MoviesComponent,
   },
+
   {
     path: 'movies/:id',
     pathMatch: 'full',

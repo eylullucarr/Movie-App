@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
@@ -47,14 +47,10 @@ export class MovieDetailComponent implements OnInit {
       this.newSummary = this.removePTags(this.movie.summary);
     });
     this.searchQuery = this.movieService.getQuery();
-    console.log(this.searchQuery);
   }
 
   backpage() {
-    this.movieService.getMovies(this.searchQuery).subscribe((response) => {
-      console.log(response);
-      this.movie = response;
-      this.router.navigate(['movies']);
-    });
+    console.log(this.searchQuery);
+    this.router.navigate(['movies']);
   }
 }
