@@ -8,8 +8,7 @@
             <div class=" flex justify-content-center">
                 <input type="text" styleClass="te" [style]="{ width: '500px' }" [(ngModel)]="Query" class="mr-3 "
                     pInputText />
-                <p-button (click)="search()" styleClass="p-button-outlined p-button-danger" label="Search"
-                    (keydown.enter)="onEnter()"></p-button>
+                <p-button (click)="search()" styleClass="button" label="Search" (keydown.enter)="onEnter()"></p-button>
             </div>
         </p-card>
     </div>

@@ -14,6 +14,20 @@
   color: aliceblue;
 
 }
+:host ::ng-deep .button{
+
+  background-color: rgba(229, 6, 6, 0.1); 
+  border-color:rgba(0, 0, 0, 0.1) ;
+
+}
+:host ::ng-deep .button:hover{
+
+  background-color: aliceblue;
+  border-color:rgba(0, 0, 0, 0.1) ;
+  color: black;
+
+
+}
 
 
 
