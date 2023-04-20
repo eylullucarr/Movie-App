@@ -10,7 +10,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MenubarModule } from 'primeng/menubar';
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesComponent } from './components/movies/movies.component';
-<<<<<<< HEAD
 import { PeopleComponent } from './components/people/people.component';
 import { DockComponent } from './components/dock/dock.component';
 
@@ -30,13 +29,6 @@ import { DockComponent } from './components/dock/dock.component';
     MoviesComponent,
     DockComponent,
   ],
-=======
-import { MovieCardComponent } from './components/movie-card/movie-card.component';
-
-@NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
->>>>>>> development
   providers: [],
   bootstrap: [AppComponent],
 })
