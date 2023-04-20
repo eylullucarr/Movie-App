@@ -1,5 +1,4 @@
 .movie {
-<<<<<<< HEAD
     transition: all 0.3s ease;
   }
   
@@ -9,26 +8,3 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   }
   
-=======
-    transition: transform 0.3s ease;
- 
-  }
-  
-.movie:hover {
-    transform: scale(1.04);
-    box-shadow: 2px;
-    box-shadow: 0px 0px 30px 2px rgb(207, 218, 230);
-  }
-
-  :host ::ng-deep .test {
-    background-color: black;
-    box-shadow: 0px 0px 30px 1px rgb(92, 98, 104);
-    color: aliceblue;
-  
-  }
-
-
-  
-
- 
->>>>>>> development

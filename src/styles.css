@@ -1,13 +1,1 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-
-    font-family: 'Open Sans', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif;
-background-image: url('assets/images/interior-theatre-theater-empty-theater.jpg');
-background-size: cover; /* resmi ekran boyutuna sığdır */
-background-position: center; /* resmi ortala */
-
-}
-
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@500&display=swap');
